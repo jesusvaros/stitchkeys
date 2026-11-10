@@ -1,0 +1,22 @@
+:root { --bg: #f3e7d6; --card: #fffaf2; --fg: #3a2620; --soft: #7a6357; --accent: #b9634e; --ok: #4f7a4a; --warn: #b9634e; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+.demo { max-width: 430px; min-height: 100dvh; margin: 0 auto; display: flex; flex-direction: column; padding: 28px 16px 0; gap: 16px; }
+.demo__head h1 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1; }
+.demo__head p { margin: 6px 0 0; color: var(--soft); line-height: 1.4; }
+.demo__switches { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+.demo__switches [role='group'] { display: inline-flex; padding: 3px; border-radius: 99px; background: color-mix(in srgb, var(--fg) 8%, transparent); }
+.demo__switches button { border: 0; background: none; padding: 7px 12px; border-radius: 99px; font: 700 13px inherit; font-family: inherit; color: var(--soft); text-transform: capitalize; cursor: pointer; }
+.demo__switches button[aria-pressed='true'] { background: var(--card); color: var(--fg); box-shadow: 0 1px 3px rgb(58 38 32 / 0.15); }
+.demo__row { padding: 16px; border-radius: 22px; background: var(--card); display: grid; gap: 10px; }
+.demo__prev { display: flex; align-items: center; gap: 10px; color: var(--soft); font-weight: 700; font-size: 13px; }
+.demo__prev span { flex: 1; }
+.demo__prev button { width: 30px; height: 30px; border-radius: 50%; border: 0; background: color-mix(in srgb, var(--fg) 8%, transparent); font: 800 16px inherit; cursor: pointer; }
+.demo__prev b { min-width: 2ch; text-align: center; color: var(--fg); font-size: 16px; }
+.demo__text { margin: 0; min-height: 44px; font-family: 'Fraunces', Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1.15; }
+.demo__placeholder { color: color-mix(in srgb, var(--soft) 60%, transparent); font-size: 22px; font-weight: 600; }
+.demo__check { margin: 0; justify-self: start; padding: 5px 11px; border-radius: 99px; font-weight: 800; font-size: 13px; background: color-mix(in srgb, var(--fg) 7%, transparent); color: var(--soft); }
+.demo__check--ok { background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok); }
+.demo__check--left, .demo__check--short { background: color-mix(in srgb, var(--warn) 16%, transparent); color: var(--warn); }
+.demo__keys { margin-top: auto; padding-bottom: env(safe-area-inset-bottom); }
+.demo .sk { --sk-accent: var(--accent); --sk-font: 'Plus Jakarta Sans', system-ui, sans-serif; }
